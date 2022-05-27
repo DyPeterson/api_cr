@@ -81,9 +81,22 @@ A [Data Stack Academy](https://www.datastack.academy/) code review project to wo
 
 ### Working with the API
 I used Postman to work with the API, but other tools exist so feel free to use your own, but this tutorial is Postman focused.
+
 #### GET Method:
-Set the endpoint to `/see_stats`
+This method allows you to query the data to search for superheroes.
+Set the endpoint to `/see_stats` and make sure the GET is selected in Postman, you can also use a web browser to use this method(more on this later).
+Now select the "params" tab below that. Now we can start querying the database.
+To do this you **must** set the key to atleast one of the following (you can also select more than one for a more specific search):
+
+ - `name`
+ - `superpower`
+ - `weakness`
+
+Now it the value field type what you would like to query the database for, currently there is only 3 default heroes, but you can add more with the POST method(below)
+Once you have a query inserted to can press the `SEND` button to query. This will return a superhero if one in the database matches your query.
+
 #### POST Method:
+
 Set the endpoint to `/add_stats`
 ![Image of Postman program highlighting the dropdown menu with POST selected.](https://lh3.googleusercontent.com/LFcmF5nvS_fd1neeBRC9Ti3lYnnrp5iQxH7QTt2zX9j-virO1E339KDdSquY4s63rEu-driQSCQE-bWK32lE-QQGpzLlcTbWZ3pBniHNLDNFIBD_3CvdwVJv0wrZyWIP0oUMSLBKNTurowmSwRQ_tBw-zRx2WdFiW8KkpbV_mgpSQOqL8ON7ANYtjTOPAmhbVf2DPjYp4ZI2mKAPccs2nfjf2M7DK3SlJDTl321fEAhk5r-N81BEw_bwIZ6nUlhJuu-oBZf9ocglEy5e5HgPnNDjeelHhQlRg5VMpluEogiLMWCJZ2tE0RHQbSpgKTjcNS2uHth2nPwmGXRYo2upg0UsTcGBHEGkHX0Fw8FaODeIz1xzWUhDY983GnBZMpawDuFMlLTKsCmHgUB2rtRlq_RPt7QFjBnWNtxSQ9sU2pJjzOnRkQG_wi8C_tAHmlCKQqTDmFhP0lwj9v8ygDJ1GA0X1ke6Q7iTu4seoZXx7rIAbwU9dSebTyXe_dYgMWryE7GK0QbjIOhbiAuSzg5ew4wxIsW2in3ZLnwNmSlQDAAI_7b_HeMHTcg4CJuUYvIc5fHXP7OfJu98zrzvLcqbdNcDFl3c_L2kFABLPslo-LTe_ocvpS0Uv2E_UogDl4cIuYfTpttJfBpyco7xPhHnKBE-Yd_6LNywBEv_aBifQl3zbqY-sJ5VwGB8hkQ71Vk0Y460pULjO0xo5YJNJNiBE8nlQL4CrqBaL1BC6oubg2kqH7avxV9UYScL9v0_q_6Scst-C-y7yJuh_hFl-dyFItj86BaU4x_Vwjc=w1017-h684-no?authuser=0)
 ```
