@@ -80,13 +80,13 @@ def add_stats():
             # :(
             data = request.json
             for hero in data:
+                hero_name = hero['name']
                 if ('name' in hero) and ('superpower' in hero) and ('weakness' in hero):
-                    hero_name = hero['name']
                     logger.info(f'Adding a hero to the hideout, welcome "{hero_name}"')
                     super_df.loc[hero['name']] = hero
                     added_heroes.append(hero)
                 else:
-                    logger.info(f'Rejecting {hero}')
+                    logger.info(f'Better luck next time "{hero_name}", you\'ve been rejected.')
                     rejected_heroes.append(hero)
             logger.info(f'Added {len(added_heroes)} heroes & Rejected {len(rejected_heroes)} heroes')
             response_json = {
