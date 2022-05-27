@@ -73,7 +73,34 @@ def add_stats():
     Function to add a superhero to the database.
     """
     global super_df
-    pass
+    try:
+        added_heroes = []
+        rejected_heroes = []
+        # :(
+        data = request.json
+        for hero in data:
+            if ('name' in hero) and ('superpower' in hero) and ('weakness' in hero):
+                logger.info(f'Adding a hero to the hideout, welcome {hero}')
+                index = hero['name']
+                super_df.loc[hero['name']] = hero
+                added_heroes.append(hero)
+            else:
+                logger.info(f'Rejecting {hero}')
+                rejected_heroes.append(hero)
+        logger.info(f'Added {len(added_heroes)} heroes & Rejected {len(rejected_heroes)} heroes')
+        response_json = {
+            'heroes_added': len(added_heroes),
+            'result': added_heroes,
+            'rejects': rejected_heroes,
+        }
+
+        response_header = {
+            'content-type': 'application/json'
+        }
+
+        return response_json, 200, response_header
+    except Exception as error:
+        return {'status': 'error', 'error_msg': str(error)}, 400, response_header
 
 if __name__ == '__main__':
     app.run('0.0.0.0', 5050)
