@@ -79,8 +79,49 @@ A [Data Stack Academy](https://www.datastack.academy/) code review project to wo
 	
 	7. Run the `main.py`  with the command `python main.py`to run the API locally
 
-### Link to project on GitHub Useful Links
-
-  
+### Working with the API
+I used Postman to work with the API, but other tools exist so feel free to use your own, but this tutorial is Postman focused.
+#### GET Method:
+Set the endpoint to `/see_stats`
+#### POST Method:
+Set the endpoint to `/add_stats`
+![Image of Postman program highlighting the dropdown menu with POST selected.](https://lh3.googleusercontent.com/LFcmF5nvS_fd1neeBRC9Ti3lYnnrp5iQxH7QTt2zX9j-virO1E339KDdSquY4s63rEu-driQSCQE-bWK32lE-QQGpzLlcTbWZ3pBniHNLDNFIBD_3CvdwVJv0wrZyWIP0oUMSLBKNTurowmSwRQ_tBw-zRx2WdFiW8KkpbV_mgpSQOqL8ON7ANYtjTOPAmhbVf2DPjYp4ZI2mKAPccs2nfjf2M7DK3SlJDTl321fEAhk5r-N81BEw_bwIZ6nUlhJuu-oBZf9ocglEy5e5HgPnNDjeelHhQlRg5VMpluEogiLMWCJZ2tE0RHQbSpgKTjcNS2uHth2nPwmGXRYo2upg0UsTcGBHEGkHX0Fw8FaODeIz1xzWUhDY983GnBZMpawDuFMlLTKsCmHgUB2rtRlq_RPt7QFjBnWNtxSQ9sU2pJjzOnRkQG_wi8C_tAHmlCKQqTDmFhP0lwj9v8ygDJ1GA0X1ke6Q7iTu4seoZXx7rIAbwU9dSebTyXe_dYgMWryE7GK0QbjIOhbiAuSzg5ew4wxIsW2in3ZLnwNmSlQDAAI_7b_HeMHTcg4CJuUYvIc5fHXP7OfJu98zrzvLcqbdNcDFl3c_L2kFABLPslo-LTe_ocvpS0Uv2E_UogDl4cIuYfTpttJfBpyco7xPhHnKBE-Yd_6LNywBEv_aBifQl3zbqY-sJ5VwGB8hkQ71Vk0Y460pULjO0xo5YJNJNiBE8nlQL4CrqBaL1BC6oubg2kqH7avxV9UYScL9v0_q_6Scst-C-y7yJuh_hFl-dyFItj86BaU4x_Vwjc=w1017-h684-no?authuser=0)
+```
+[
+	{
+		"name":  "The Rock",
+		"superpower":  "Peoples Elbow",
+		"weakness":  "Insecure about cooking"
+	}
+]
+```
 #### Link to project on GitHub:
 [GitHub Repository](https://github.com/DyPeterson/bigquery_cr)
+
+### Details
+This project uses Flask to create an API that hosts a database of superheroes. The superhero attributes are `name` ,`superpower`&`weakness`. It allows the user to query(GET) and add(POST) heroes to the database.
+
+
+Contact me with any questions or suggestions [Here](dylan.peterson17@gmail.com)
+
+  
+
+### Known Bugs
+
+ No known bugs at this time.
+
+  
+
+### Copyright 2022
+
+  
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+  
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+  
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
