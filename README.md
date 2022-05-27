@@ -1,4 +1,3 @@
-
 ## Superhero API
 ![Titlecard displaying some superheroes](https://lh3.googleusercontent.com/A1ak5JQm_BH94QKENei3EgZ0S1qywANQIKW7HseyRYSczo3QW848D1cHYKbo9gQdj5WmqrR56ALT0KRk4gvaChLVLKfiRL6hCbg6vMr0lfWrFbD4PpvD6798RtnPOGeAlUvkwAIXAqf3m9GO2EFBkNoN37VcBeKYJg3hPD-hWvv3axRc9mT8jr8IojzCUtei0mX1v4CPAgtnLo_u5Rzfh68qSEyugiVX-mWU81NhmFlsC85C9bVs_VnXyq_UTBEQR_hqafsh-WWdMptdBlQHuudXC9jzjBtEdqwvctG7MIdBH4tAdGbpXr_UfIsTF-h-U9oz4lEVXpeZhbIsPcfk0tDahGV7IqlhDhY1JYUZipXd15_S8XhdEYu5AV4ap5R8Mmb6xhZezdPKHv-ZY5Xqk1jv8ow-9qfRmuVNaUeXpcMov9GkWnIg9cMI-o8priL0Hxu4Pf3L5eQS8QSOdB4m7hf6w3uIAra89pYiwlqKn5c3YSCcH-TpBzZnLjMekXP_sjRZF-o1yiVskXO2sal4w3ppsZiFAjTF7loGYpehRx0EUdbS0xmUUUJRx1SKC2imYD4hA5Yg4vZZNlPB1VpuIVfKLAisZnRDoGobonUmkHv_ZkUSsDb2uMJWXPc4ZWJTVMpkeOZHb0TQhB6OS86a4O2-XqzBoBLw3ZiJ7uFDyDU19DwArT-uXeKjsiVvMNbA2CwxQc2VoEiEZB2U9PtWrr1U52jSyvNnDMYjS5BFK65aeBxPc-IJDLK-Hgoh3P-Ubkq5lovjPoEeMuaQO10Jo66P6o8RGMU-peU=w640-h320-no?authuser=0)
 ### Contributors:
@@ -21,6 +20,7 @@ A [Data Stack Academy](https://www.datastack.academy/) code review project to wo
 - [Visual Code Studio](https://code.visualstudio.com/)
 - [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=US) ( Running: [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install) ([ubuntu 20.04](https://releases.ubuntu.com/20.04/)))
 - [Postman](https://www.postman.com/)
+- [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
 ### Setup & Installation:
 
 1. Through the terminal like [GitBash](https://git-scm.com/downloads)
@@ -81,7 +81,6 @@ A [Data Stack Academy](https://www.datastack.academy/) code review project to wo
 
 ### Working with the API
 I used Postman to work with the API, but other tools exist so feel free to use your own, but this tutorial is Postman focused.
-
 #### GET Method:
 This method allows you to query the data to search for superheroes.
 Set the endpoint to `/see_stats` and make sure the GET is selected in Postman, you can also use a web browser to use this method(more on this later).
@@ -95,9 +94,27 @@ To do this you **must** set the key to atleast one of the following (you can als
 Now it the value field type what you would like to query the database for, currently there is only 3 default heroes, but you can add more with the POST method(below)
 Once you have a query inserted to can press the `SEND` button to query. This will return a superhero if one in the database matches your query.
 
-#### POST Method:
+##### Using the web browser:
 
-Set the endpoint to `/add_stats`
+To use the web browser you can manually type out your query in the address bar.
+first make sure you web browser is set to the end point: `<ip.address.is.here>:5050/see_stats`. Next add a question mark followed by the key you are searching through followed by an equals sign and the query for that key.
+For example: `<ip.address.is.here>:5050/see_stats?superpower=Radiation`
+
+#### POST Method:
+To add superheroes to the database you need to use the POST method detailed below:
+Set the endpoint to `/add_stats`, make sure that POST is selected from the drop-down menu. Then select `Body` below that, on the next line below that select `raw` and also `JSON` from the drop-down menu.
+From here we are ready to start adding superheroes to our database.
+To do so, we need to follow a specific syntax and include all three keys of our database,`name`,`superpower`&`weakness`. The values you type in for the keys will be what gets added to the database. After that press the `SEND` button and viola! Here's an example of what this looks like, followed by a picture of what it looks like in the Postman app
+```
+[
+	{
+		"name":  "The Rock",
+		"superpower":  "Peoples Elbow",
+		"weakness":  "Insecure about cooking"
+	}
+]
+```
+
 ![Image of Postman program highlighting the dropdown menu with POST selected.](https://lh3.googleusercontent.com/LFcmF5nvS_fd1neeBRC9Ti3lYnnrp5iQxH7QTt2zX9j-virO1E339KDdSquY4s63rEu-driQSCQE-bWK32lE-QQGpzLlcTbWZ3pBniHNLDNFIBD_3CvdwVJv0wrZyWIP0oUMSLBKNTurowmSwRQ_tBw-zRx2WdFiW8KkpbV_mgpSQOqL8ON7ANYtjTOPAmhbVf2DPjYp4ZI2mKAPccs2nfjf2M7DK3SlJDTl321fEAhk5r-N81BEw_bwIZ6nUlhJuu-oBZf9ocglEy5e5HgPnNDjeelHhQlRg5VMpluEogiLMWCJZ2tE0RHQbSpgKTjcNS2uHth2nPwmGXRYo2upg0UsTcGBHEGkHX0Fw8FaODeIz1xzWUhDY983GnBZMpawDuFMlLTKsCmHgUB2rtRlq_RPt7QFjBnWNtxSQ9sU2pJjzOnRkQG_wi8C_tAHmlCKQqTDmFhP0lwj9v8ygDJ1GA0X1ke6Q7iTu4seoZXx7rIAbwU9dSebTyXe_dYgMWryE7GK0QbjIOhbiAuSzg5ew4wxIsW2in3ZLnwNmSlQDAAI_7b_HeMHTcg4CJuUYvIc5fHXP7OfJu98zrzvLcqbdNcDFl3c_L2kFABLPslo-LTe_ocvpS0Uv2E_UogDl4cIuYfTpttJfBpyco7xPhHnKBE-Yd_6LNywBEv_aBifQl3zbqY-sJ5VwGB8hkQ71Vk0Y460pULjO0xo5YJNJNiBE8nlQL4CrqBaL1BC6oubg2kqH7avxV9UYScL9v0_q_6Scst-C-y7yJuh_hFl-dyFItj86BaU4x_Vwjc=w1017-h684-no?authuser=0)
 ```
 [
