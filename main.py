@@ -1,4 +1,5 @@
 import logging
+import sys
 import pandas as pd
 from flask import Flask, request
 
@@ -23,7 +24,7 @@ def index():
     index_str = """
     Welcome to heroes hideout, please orient yourself to '/see_stats' or '/add_stats'
     """
-    return '', 200
+    return index_str, 200
 
 
 @app.route('/see_stats', methods=['GET'])
@@ -39,18 +40,15 @@ def see_stats():
     if name is not None:
         logger.info(f'name query for {name}')
         results_df = super_df.loc[super_df['name'] == name]
-    else:
-        results_df = super_df
     
-    if superpower is not None:
+    elif superpower is not None:
         logger.info(f'superpower query for {superpower}')
         results_df = super_df.loc[super_df['superpower'] == superpower]
-    else:
-        results_df = super_df
 
-    if weakness is not None:
+    elif weakness is not None:
         logger.info(f'weakness query for {weakness}')
         results_df = super_df.loc[super_df['weakness'] == weakness]
+    
     else:
         results_df = super_df
 
