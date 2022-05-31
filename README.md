@@ -1,5 +1,5 @@
 ## Superhero API
-![Titlecard displaying some superheroes](https://imgur.com/Sd8iZkH)
+![Titlecard displaying some superheroes](https://i.ibb.co/Rg2ZScQ/superhero-api-social-preview2.png)
 ### Contributors:
 
 - [Dylan Peterson](https://github.com/DyPeterson)
@@ -115,7 +115,7 @@ To do so, we need to follow a specific syntax and include all three keys of our 
 ]
 ```
 
-![Image of Postman program highlighting the dropdown menu with POST selected.](https://imgur.com/B58kAXr)
+![Image of Postman program highlighting the dropdown menu with POST selected.](https://i.ibb.co/RGXRcqg/postman.png)
 ```
 [
 	{
